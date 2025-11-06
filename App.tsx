@@ -12,18 +12,21 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 import HelloWorldApp from './src/HelloWorld';
+import AppNavigator from './src/AppNavigator';
+
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
-  return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      {/* BASE-FILE-APP-CONTENT-REPLACEMENT-POINT */}
-      {/* <AppContent /> */}
-      <HelloWorldApp />
-    </SafeAreaProvider>
-  ); 
+  return <AppNavigator />;
+  // return (
+  //   <SafeAreaProvider>
+  //     <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+  //     {/* BASE-FILE-APP-CONTENT-REPLACEMENT-POINT */}
+  //     {/* <AppContent /> */}
+  //     <HelloWorldApp />
+  //   </SafeAreaProvider>
+  // ); 
 }
 
 function AppContent() {
